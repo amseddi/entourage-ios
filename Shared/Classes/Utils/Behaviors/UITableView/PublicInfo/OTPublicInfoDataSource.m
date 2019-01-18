@@ -22,7 +22,15 @@
     OTFeedItem *summary = feedItem.copy;
     summary.identifierTag = @"summary";
     [items addObject:summary];
-    
+	
+	// Description row
+	NSString *description = [[[OTFeedItemFactory createFor:feedItem] getUI] feedItemDescription];
+	if ([description length] > 0) {
+		OTFeedItem *desc = feedItem.copy;
+		desc.identifierTag = @"feedDescription";
+		[items addObject:desc];
+	}
+	
     if ([feedItem isOuting]) {
         // Event creator row
         OTFeedItem *eventAuthor = feedItem.copy;
@@ -39,14 +47,6 @@
     OTFeedItem *map = feedItem.copy;
     map.identifierTag = @"feedLocation";
     [items addObject:map];
-    
-    // Description row
-    NSString *description = [[[OTFeedItemFactory createFor:feedItem] getUI] feedItemDescription];
-    if ([description length] > 0) {
-        OTFeedItem *desc = feedItem.copy;
-        desc.identifierTag = @"feedDescription";
-        [items addObject:desc];
-    }
     
     // Members count row
     OTFeedItem *membersCount = feedItem.copy;

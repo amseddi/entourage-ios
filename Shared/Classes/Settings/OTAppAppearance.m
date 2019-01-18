@@ -420,7 +420,7 @@
         textColor = [OTAppAppearance iconColorForFeedItem:item];
     }
 
-    NSString *organizerText = @"\nOrganisé";
+    NSString *organizerText = @"Organisé";
     NSString *fontName = @"SFUIText-Medium";
     CGFloat fontSize = DEFAULT_DESCRIPTION_SIZE;
     

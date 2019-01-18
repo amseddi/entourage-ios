@@ -1132,34 +1132,8 @@
                                 <color key="separatorColor" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="65" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MapCell" rowHeight="170" id="zwv-51-HP1" customClass="OTMapCell">
-                                        <rect key="frame" x="0.0" y="1" width="414" height="170"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zwv-51-HP1" id="rg6-Cw-UB8">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GK5-WC-86M">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="169"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="169" id="po6-dm-pa6"/>
-                                                    </constraints>
-                                                </mapView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="GK5-WC-86M" firstAttribute="top" secondItem="rg6-Cw-UB8" secondAttribute="top" id="5NG-C4-8Wa"/>
-                                                <constraint firstAttribute="bottom" secondItem="GK5-WC-86M" secondAttribute="bottom" id="SFu-09-Khv"/>
-                                                <constraint firstItem="GK5-WC-86M" firstAttribute="leading" secondItem="rg6-Cw-UB8" secondAttribute="leading" id="WEl-bC-XdF"/>
-                                                <constraint firstAttribute="trailing" secondItem="GK5-WC-86M" secondAttribute="trailing" id="uHk-l4-VrX"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="annotationProvider" destination="Mb6-Jg-13f" id="WKj-o1-4Nt"/>
-                                            <outlet property="map" destination="GK5-WC-86M" id="C0h-OS-nsq"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DescriptionCell" rowHeight="31" id="bdt-V8-jnZ" customClass="OTDescriptionCell">
-                                        <rect key="frame" x="0.0" y="171" width="414" height="31"/>
+                                        <rect key="frame" x="0.0" y="1" width="414" height="31"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bdt-V8-jnZ" id="G7G-15-UPC">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
@@ -1184,6 +1158,32 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="txtDescription" destination="XVo-09-Z8M" id="4DR-a8-DtM"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MapCell" rowHeight="170" id="zwv-51-HP1" customClass="OTMapCell">
+                                        <rect key="frame" x="0.0" y="32" width="414" height="170"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zwv-51-HP1" id="rg6-Cw-UB8">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GK5-WC-86M">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="169"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="169" id="po6-dm-pa6"/>
+                                                    </constraints>
+                                                </mapView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GK5-WC-86M" firstAttribute="top" secondItem="rg6-Cw-UB8" secondAttribute="top" id="5NG-C4-8Wa"/>
+                                                <constraint firstAttribute="bottom" secondItem="GK5-WC-86M" secondAttribute="bottom" id="SFu-09-Khv"/>
+                                                <constraint firstItem="GK5-WC-86M" firstAttribute="leading" secondItem="rg6-Cw-UB8" secondAttribute="leading" id="WEl-bC-XdF"/>
+                                                <constraint firstAttribute="trailing" secondItem="GK5-WC-86M" secondAttribute="trailing" id="uHk-l4-VrX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="annotationProvider" destination="Mb6-Jg-13f" id="WKj-o1-4Nt"/>
+                                            <outlet property="map" destination="GK5-WC-86M" id="C0h-OS-nsq"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MemberCountCell" rowHeight="37" id="c2j-TR-d7J" customClass="OTMemberCountCell">
