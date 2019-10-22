@@ -87,7 +87,7 @@
      {
          NSDictionary *data = responseObject;
          NSMutableArray *myFeeds = [self feedItemsFromDictionary:data];
-         [self updateUnreadCount:myFeeds];
+         [self updateUnreadCount:myFeeds]; // TODO: this seems problematic
          if (success)
              success(myFeeds);
      }
@@ -120,7 +120,7 @@
 }
 
 - (void)updateUnreadCount:(NSArray *)feeds {
-    for (OTFeedItem *item in feeds) {
+    for (OTFeedItem *item in feeds) {  // TODO: this seems problematic
         item.unreadMessageCount = [[OTUnreadMessagesService sharedInstance] countUnreadMessages:item.uid stringId:item.uuid];
     }
 }

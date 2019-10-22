@@ -36,7 +36,7 @@
 @property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSNumber *noPeople;
 @property (nonatomic, strong) OTMyFeedMessage *lastMessage;
-@property (nonatomic, assign) NSNumber *unreadMessageCount;
+@property (nonatomic, strong) NSNumber *unreadMessageCount;
 @property (nonatomic, strong) NSString *shareUrl;
 
 @property (nonatomic, strong) NSDate *startsAt;
